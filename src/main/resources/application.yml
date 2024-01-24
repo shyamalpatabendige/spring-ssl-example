@@ -1,7 +1,13 @@
 server:
   port: 8443
   ssl:
-    key-store: keystore.p12
-    key-store-password: 123456
-    keyStoreType: PKCS12
-    keyAlias: spring-ssl-example
+    enabled: true
+    key-store: keystore.jks
+    key-store-password: changeit
+    key-alias: localhost
+    key-password: changeit
+
+    trust-store: truststore.jks
+    trust-store-password: changeit
+
+    client-auth: need
